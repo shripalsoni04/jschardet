@@ -1,11 +1,14 @@
 {
-    "name": "jschardet",
+    "name": "jschardet-utf8-only",
     "version": "2.1.1",
     "description": "Character encoding auto-detection in JavaScript (port of python's chardet)",
     "author": "António Afonso",
     "license": "LGPL-2.1+",
-    "keywords": ["encoding", "charset"],
-    "repository" : {
+    "keywords": [
+        "encoding",
+        "charset"
+    ],
+    "repository": {
         "type": "git",
         "url": "https://github.com/aadsm/jschardet.git"
     },

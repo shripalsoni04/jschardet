@@ -33,8 +33,6 @@
 
 var constants = require('./constants');
 var MBCSGroupProber = require('./mbcsgroupprober');
-var SBCSGroupProber = require('./sbcsgroupprober');
-var Latin1Prober = require('./latin1prober');
 var EscCharSetProber = require('./escprober')
 var logger = require('./logger');
 
@@ -141,9 +139,7 @@ function UniversalDetector(options) {
         } else if( this._mInputState == _state.highbyte ) {
             if( this._mCharsetProbers.length == 0 ) {
                 this._mCharsetProbers = [
-                    new MBCSGroupProber(),
-                    new SBCSGroupProber(),
-                    new Latin1Prober()
+                    new MBCSGroupProber()
                 ];
             }
             for( var i = 0, prober; prober = this._mCharsetProbers[i]; i++ ) {
